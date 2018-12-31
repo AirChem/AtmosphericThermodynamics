@@ -1,0 +1,1 @@
+% function h2o_pvap = h2o_pvap_calc(T)% Calculates saturation vapor pressure of water as a function of% temperature.% Pressure is in torr, temperature is in Kelvin% 082708 TPRfunction out = h2o_pvap_calc(T)a = 0.750061683;b = 6.112;c = 6816;d = 5.1309;T0 = 273.15;out = a.*b.*exp(c.*(1/T0-1./T)+d.*log(T0./T)); %saturation vapor pressure, Torr
